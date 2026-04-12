@@ -18,7 +18,7 @@ const ContactForm = () => {
 
       <div className="mx-auto max-w-7xl w-full relative z-10">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-          
+
           {/* Left Side: Form Card (Swapped) */}
           <div className="relative order-2 lg:order-1">
             <div className="bg-[#ffffff]/15 backdrop-blur-xl border border-white/20 p-8 md:p-12 rounded-[2.5rem] shadow-2xl">
@@ -26,52 +26,52 @@ const ContactForm = () => {
                 {/* Name */}
                 <div className="flex items-center">
                   <span className="w-24 text-white font-semibold text-base">Name</span>
-                  <input 
-                    type="text" 
-                    placeholder="Enter your name" 
+                  <input
+                    type="text"
+                    placeholder="Enter your name"
                     className="flex-1 bg-white/10 border border-white/30 rounded-full px-6 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-white transition-all"
                   />
                 </div>
                 {/* Email */}
                 <div className="flex items-center">
                   <span className="w-24 text-white font-semibold text-base">Email</span>
-                  <input 
-                    type="email" 
-                    placeholder="Enter your mail id" 
+                  <input
+                    type="email"
+                    placeholder="Enter your mail id"
                     className="flex-1 bg-white/10 border border-white/30 rounded-full px-6 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-white transition-all"
                   />
                 </div>
                 {/* Phone */}
                 <div className="flex items-center">
                   <span className="w-24 text-white font-semibold text-base">Phone</span>
-                  <input 
-                    type="tel" 
-                    placeholder="Enter your phone number" 
+                  <input
+                    type="tel"
+                    placeholder="Enter your phone number"
                     className="flex-1 bg-white/10 border border-white/30 rounded-full px-6 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-white transition-all"
                   />
                 </div>
                 {/* Place */}
                 <div className="flex items-center">
                   <span className="w-24 text-white font-semibold text-base">Place</span>
-                  <input 
-                    type="text" 
-                    placeholder="Enter your place" 
+                  <input
+                    type="text"
+                    placeholder="Enter your place"
                     className="flex-1 bg-white/10 border border-white/30 rounded-full px-6 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-white transition-all"
                   />
                 </div>
                 {/* Message */}
                 <div className="flex items-start">
                   <span className="w-24 text-white font-semibold text-base pt-3">Message</span>
-                  <textarea 
-                    placeholder="Enter your message" 
+                  <textarea
+                    placeholder="Enter your message"
                     rows={4}
                     className="flex-1 bg-white/10 border border-white/30 rounded-[1.5rem] px-6 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-white transition-all resize-none"
                   ></textarea>
                 </div>
 
                 <div className="flex justify-end pt-4">
-                  <button 
-                    type="submit" 
+                  <button
+                    type="submit"
                     className="bg-[#24355c] hover:bg-[#1a2744] text-white px-10 py-3 rounded-full text-sm font-semibold transition-all shadow-lg"
                   >
                     Submit
@@ -91,7 +91,7 @@ const ContactForm = () => {
             <p className="text-white/90 text-lg md:text-xl font-medium mb-12">
               For any queries, get in touch
             </p>
-            
+
             <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-6">
               {/* Email Pill - Transparent with border */}
               <div className="flex items-center gap-3 px-8 py-4 rounded-full bg-transparent border border-white/60 w-max transition-all hover:bg-white/5">

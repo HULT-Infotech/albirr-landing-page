@@ -6,7 +6,7 @@ const CardsSection = () => {
     <section className="bg-white py-24 px-6 md:px-12">
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col md:flex-row md:items-baseline justify-between mb-20 gap-4">
-          <h2 className="text-4xl md:text-5xl font-black text-[#0f1f42] tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-[#0f1f42] tracking-tight">
             Our Facilities
           </h2>
           <div className="text-gray-300 font-medium text-sm md:text-base tracking-wide italic">
@@ -46,9 +46,9 @@ const CardsSection = () => {
               />
             </div>
             <div className="p-8 flex flex-col flex-grow">
-              <h3 className="text-lg md:text-xl font-bold text-white mb-4">IT Enabled Smart Classrooms</h3>
+              <h3 className="text-lg md:text-xl font-bold text-white mb-4">Secured And Well Structured Building</h3>
               <p className="text-gray-300 text-xs md:text-sm leading-relaxed font-medium">
-                Step into the future of education with our state of the art smart classrooms, equipped with interactive technology that enhances learning experiences and fosters digital literacy.
+                Your child&apos;s safety is our top priority. Our meticulously designed and secure building ensures a protective environment, providing peace of mind for parents and a conducive space for learning and growth.
               </p>
             </div>
           </div>
@@ -64,9 +64,9 @@ const CardsSection = () => {
               />
             </div>
             <div className="p-8 flex flex-col flex-grow">
-              <h3 className="text-lg md:text-xl font-bold text-[#0f1f42] mb-4">IT Enabled Smart Classrooms</h3>
+              <h3 className="text-lg md:text-xl font-bold text-[#0f1f42] mb-4">Children&apos;S Park</h3>
               <p className="text-gray-400 text-xs md:text-sm leading-relaxed font-medium">
-                Step into the future of education with our state of the art smart classrooms, equipped with interactive technology that enhances learning experiences and fosters digital literacy.
+                Delight in outdoor adventures, socializing, and joyful play in our vibrant park designed for all.
               </p>
             </div>
           </div>

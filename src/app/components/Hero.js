@@ -6,14 +6,14 @@ import { ArrowUpRight } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="relative overflow-visible px-6 pt-0 pb-16 md:px-12 md:pb-24 lg:pb-32">
-      {/* Background Shape Image */}
+    <section className="relative overflow-hidden px-6 pt-0 pb-16 md:px-12 md:pb-24 lg:pb-32">
+      {/* Background Shape Image - Moved to leftmost upper corner */}
       <div className="absolute inset-0 z-0">
         <Image
           src="/hero shape 5.png"
           alt="Hero background shape"
           fill
-          className="object-cover"
+          className="object-cover object-left-top"
           priority
         />
       </div>
@@ -24,11 +24,11 @@ const Hero = () => {
         <div className="absolute -left-40 top-20 h-[450px] w-[450px] rounded-full bg-[#36E1FF]/15 blur-[100px]" />
       </div>
 
-      {/* Navbar */}
-      <div className="relative z-50 mx-auto max-w-7xl flex items-center justify-between -mt-6 md:-mt-12 pb-0">
+      {/* Navbar - Pulled tightly to top */}
+      <div className="relative z-50 mx-auto max-w-7xl flex items-center justify-between pt-2 pb-6 md:pt-4 md:pb-8 lg:pt-6 lg:pb-10">
         {/* Logo */}
         <Link href="#" className="flex-shrink-0">
-          <div className="relative h-48 w-48 md:h-80 md:w-80 rounded-lg overflow-hidden flex-shrink-0">
+          <div className="relative h-20 w-48 md:h-32 md:w-80 rounded-lg overflow-hidden flex-shrink-0">
             <Image
               src="/newlogo 1.png"
               alt="AL-BIRR Schools Logo"
@@ -62,37 +62,37 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Hero Content */}
-      <div className="relative z-10 mx-auto max-w-7xl -mt-8 md:-mt-16 lg:-mt-24">
+      {/* Hero Content - Pulled tightly upwards towards navbar */}
+      <div className="relative z-10 mx-auto max-w-7xl mt-0 md:-mt-8 lg:-mt-20">
         <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
           <div className="flex flex-col justify-center space-y-6 text-center lg:text-left">
-            <h1 className="text-5xl font-black leading-[1.1] tracking-tight text-white sm:text-7xl lg:text-7xl">
+            <h1 className="text-5xl font-black leading-[1.1] tracking-tight text-white sm:text-7xl lg:text-[54px] max-w-[850px]">
               Shaping Future <br />
-              Generations with <br />
-              Faith and Knowledge
+              Generations with Faith <br />
+              and Knowledge
             </h1>
-            <p className="max-w-lg text-base leading-relaxed text-white/85 sm:text-lg">
+            <p className="max-w-md text-base leading-relaxed text-white/85 sm:text-lg">
               Delivering quality Islamic education through 350+ branches worldwide.
             </p>
 
-            <div className="flex flex-wrap justify-center gap-4 lg:justify-start pt-4">
+            <div className="flex flex-wrap justify-center gap-6 lg:justify-start pt-6">
               <Link
                 href="#"
-                className="relative inline-flex items-center rounded-full bg-[#9C4A9C] px-8 py-3 text-sm font-bold text-white shadow-[0_10px_40px_rgba(156,74,156,0.3)] transition hover:brightness-125 active:scale-95"
+                className="relative inline-flex items-center justify-center rounded-lg bg-[#9c569c] px-10 py-4 text-base font-bold text-white shadow-[0_10px_40px_rgba(156,74,156,0.3)] transition hover:brightness-125 active:scale-95 min-w-[160px]"
               >
                 Join Us
               </Link>
               <Link
                 href="#"
-                className="inline-flex items-center rounded-full border-2 border-white/40 bg-transparent px-8 py-3 text-sm font-bold text-white transition hover:border-white hover:bg-white/5 active:scale-95"
+                className="inline-flex items-center justify-center rounded-lg border-2 border-white/60 bg-transparent px-10 py-4 text-base font-bold text-white transition hover:border-white hover:bg-white/5 active:scale-95 min-w-[160px]"
               >
                 Learn More
               </Link>
             </div>
           </div>
 
-          <div className="relative flex items-center justify-center lg:justify-end">
-            <div className="relative w-full aspect-square max-w-[650px] lg:-mr-12">
+          <div className="relative flex items-center justify-center lg:justify-end overflow-visible">
+            <div className="relative w-full aspect-square max-w-[800px] lg:-ml-24 lg:scale-125 transform transition-transform">
               <Image
                 src="/first_image.png"
                 alt="Students learning with Al-Birr Schools"
@@ -104,7 +104,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-
     </section>
   );
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 
 const FeatureCard = ({ id, alt }) => (
-  <div className="relative group overflow-hidden rounded-[2.5rem] shadow-xl transition-all hover:scale-105 hover:shadow-2xl">
+  <div className="relative group transition-all duration-500 hover:scale-105">
     <Image
       src={`/row${id}.png`}
       alt={alt}
@@ -26,7 +26,7 @@ const Features = () => {
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
-            <h2 className="text-4xl font-black text-[#0f1f42] md:text-5xl lg:text-6xl tracking-tight">
+            <h2 className="text-4xl font-extrabold text-[#0f1f42] md:text-5xl lg:text-6xl tracking-tight">
               Why Choose Us?
             </h2>
           </div>
