@@ -7,13 +7,13 @@ const ChairmanMessage = () => {
   return (
     <section className="bg-white py-12 px-6 md:px-12 lg:py-16">
       <div className="mx-auto max-w-6xl">
-        <div className="bg-[#fcfcfc] border border-gray-100 rounded-[3rem] p-6 md:p-10 lg:p-12 shadow-sm overflow-hidden relative">
-          <div className="grid gap-16 lg:grid-cols-5 lg:items-center">
+        <div className="bg-[#fcfcfc] border border-gray-100 rounded-[2.5rem] md:rounded-[3rem] p-6 md:p-10 lg:p-12 shadow-sm overflow-hidden relative">
+          <div className="grid gap-12 lg:gap-16 lg:grid-cols-5 lg:items-center">
             
             {/* Left Content */}
-            <div className="lg:col-span-3 flex flex-col justify-center">
+            <div className="lg:col-span-3 flex flex-col justify-center items-center lg:items-start">
               <div className="h-1.5 w-12 bg-red-500 mb-8 rounded-full shadow-[0_2px_10px_rgba(239,68,68,0.3)]"></div>
-              <h2 className="text-4xl font-black text-[#0f1f42] md:text-5xl lg:text-5xl mb-8 tracking-tight leading-tight whitespace-nowrap">
+              <h2 className="text-3xl font-black text-[#0f1f42] md:text-5xl lg:text-5xl mb-8 tracking-tight leading-tight whitespace-normal md:whitespace-nowrap text-center lg:text-left">
                 Chairman&apos;s Message
               </h2>
               
@@ -27,7 +27,7 @@ const ChairmanMessage = () => {
                 </p>
               </div>
 
-              <div className="mt-12">
+              <div className="mt-12 flex justify-center lg:justify-start">
                 <Link
                   href="#"
                   className="group inline-flex items-center gap-3 text-[#9C4A9C] font-black text-xl transition-all hover:gap-5"
@@ -52,8 +52,8 @@ const ChairmanMessage = () => {
                   />
                 </div>
               </div>
-              <div className="mt-8 text-center">
-                <h4 className="text-xl font-black text-[#9C4A9C] tracking-tight">
+              <div className="mt-8 text-center px-4">
+                <h4 className="text-lg md:text-xl font-black text-[#9C4A9C] tracking-tight">
                   Sayed Muhammed Koya Jamalullaily
                 </h4>
                 <p className="text-gray-500 font-bold mt-1">

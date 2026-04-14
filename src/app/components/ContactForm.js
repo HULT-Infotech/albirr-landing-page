@@ -21,51 +21,51 @@ const ContactForm = () => {
 
           {/* Left Side: Form Card (Swapped) */}
           <div className="relative order-2 lg:order-1">
-            <div className="bg-[#ffffff]/15 backdrop-blur-xl border border-white/20 p-8 md:p-12 rounded-[2.5rem] shadow-2xl">
+            <div className="bg-[#ffffff]/15 backdrop-blur-xl border border-white/20 p-6 md:p-12 rounded-[2rem] md:rounded-[2.5rem] shadow-2xl">
               <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
                 {/* Name */}
-                <div className="flex items-center">
-                  <span className="w-24 text-white font-semibold text-base">Name</span>
+                <div className="flex flex-col md:flex-row md:items-center gap-2">
+                  <span className="md:w-24 text-white font-semibold text-base">Name</span>
                   <input
                     type="text"
                     placeholder="Enter your name"
-                    className="flex-1 bg-white/10 border border-white/30 rounded-full px-6 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-white transition-all"
+                    className="flex-1 bg-white/10 border border-white/30 rounded-full px-6 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-white transition-all w-full"
                   />
                 </div>
                 {/* Email */}
-                <div className="flex items-center">
-                  <span className="w-24 text-white font-semibold text-base">Email</span>
+                <div className="flex flex-col md:flex-row md:items-center gap-2">
+                  <span className="md:w-24 text-white font-semibold text-base">Email</span>
                   <input
                     type="email"
                     placeholder="Enter your mail id"
-                    className="flex-1 bg-white/10 border border-white/30 rounded-full px-6 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-white transition-all"
+                    className="flex-1 bg-white/10 border border-white/30 rounded-full px-6 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-white transition-all w-full"
                   />
                 </div>
                 {/* Phone */}
-                <div className="flex items-center">
-                  <span className="w-24 text-white font-semibold text-base">Phone</span>
+                <div className="flex flex-col md:flex-row md:items-center gap-2">
+                  <span className="md:w-24 text-white font-semibold text-base">Phone</span>
                   <input
                     type="tel"
                     placeholder="Enter your phone number"
-                    className="flex-1 bg-white/10 border border-white/30 rounded-full px-6 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-white transition-all"
+                    className="flex-1 bg-white/10 border border-white/30 rounded-full px-6 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-white transition-all w-full"
                   />
                 </div>
                 {/* Place */}
-                <div className="flex items-center">
-                  <span className="w-24 text-white font-semibold text-base">Place</span>
+                <div className="flex flex-col md:flex-row md:items-center gap-2">
+                  <span className="md:w-24 text-white font-semibold text-base">Place</span>
                   <input
                     type="text"
                     placeholder="Enter your place"
-                    className="flex-1 bg-white/10 border border-white/30 rounded-full px-6 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-white transition-all"
+                    className="flex-1 bg-white/10 border border-white/30 rounded-full px-6 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-white transition-all w-full"
                   />
                 </div>
                 {/* Message */}
-                <div className="flex items-start">
-                  <span className="w-24 text-white font-semibold text-base pt-3">Message</span>
+                <div className="flex flex-col md:flex-row md:items-start gap-2">
+                  <span className="md:w-24 text-white font-semibold text-base md:pt-3">Message</span>
                   <textarea
                     placeholder="Enter your message"
                     rows={4}
-                    className="flex-1 bg-white/10 border border-white/30 rounded-[1.5rem] px-6 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-white transition-all resize-none"
+                    className="flex-1 bg-white/10 border border-white/30 rounded-[1.5rem] px-6 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-white transition-all resize-none w-full"
                   ></textarea>
                 </div>
 
@@ -82,8 +82,8 @@ const ContactForm = () => {
           </div>
 
           {/* Right Side: Content (Swapped) */}
-          <div className="text-white lg:pl-16 order-1 lg:order-2">
-            <h2 className="text-5xl md:text-7xl font-bold leading-[1.1] mb-8">
+          <div className="text-white lg:pl-16 order-1 lg:order-2 text-center lg:text-left flex flex-col items-center lg:items-start">
+            <h2 className="text-4xl md:text-7xl font-bold leading-[1.1] mb-8">
               We would love<br />
               to <span className="text-[#FE9860]">hear from</span><br />
               <span className="text-[#FE9860]">you.</span>

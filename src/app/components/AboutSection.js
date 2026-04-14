@@ -7,12 +7,12 @@ const AboutSection = () => {
   return (
     <section className="bg-transparent px-6 py-12 md:px-12 md:py-16">
       <div className="mx-auto max-w-7xl">
-        <div className="border-2 border-[#36E1FF]/40 rounded-[2.5rem] p-8 md:p-12 bg-white/3">
+        <div className="border border-[#36E1FF]/30 rounded-[2rem] md:rounded-[2.5rem] p-6 md:p-12 bg-white/5 backdrop-blur-sm">
           <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
             {/* Left Content */}
-            <div className="flex flex-col justify-center">
-              <div className="h-1.5 w-16 bg-[#F05B28] mb-6 rounded-full"></div>
-              <h2 className="text-4xl font-black text-white md:text-5xl">
+            <div className="flex flex-col justify-center text-center lg:text-left items-center lg:items-start">
+              <div className="h-1.5 w-12 md:w-16 bg-[#F05B28] mb-6 rounded-full"></div>
+              <h2 className="text-3xl font-black text-white md:text-5xl">
                 About ALBİRR
               </h2>
               
@@ -25,7 +25,7 @@ const AboutSection = () => {
                 </p>
               </div>
 
-              <div className="mt-10">
+              <div className="mt-10 flex justify-center lg:justify-start">
                 <Link
                   href="#"
                   className="group inline-flex items-center gap-3 text-white font-semibold transition-all hover:gap-5"
@@ -38,9 +38,8 @@ const AboutSection = () => {
               </div>
             </div>
 
-            {/* Right Image Container */}
-            <div className="relative">
-              <div className="relative h-[400px] w-full overflow-hidden rounded-[2rem] bg-white/5 border border-white/10">
+            <div className="relative mt-8 lg:mt-0">
+              <div className="relative h-[280px] sm:h-[350px] md:h-[400px] w-full overflow-hidden rounded-[1.5rem] md:rounded-[2rem] bg-white/5 border border-white/10 shadow-2xl">
                 <Image
                   src="/second_image.png"
                   alt="Al-Birr Schools - Students and Learning"

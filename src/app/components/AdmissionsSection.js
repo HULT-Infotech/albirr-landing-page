@@ -27,8 +27,8 @@ const AdmissionsSection = () => {
           </div>
 
           {/* Right: Content */}
-          <div className="flex flex-col justify-center text-white lg:pl-12">
-            <h2 className="text-4xl md:text-5xl lg:text-[54px] font-bold leading-[1.1] mb-12 tracking-tight">
+          <div className="flex flex-col justify-center text-white lg:pl-12 text-center lg:text-left items-center lg:items-start">
+            <h2 className="text-3xl md:text-5xl lg:text-[54px] font-bold leading-[1.1] mb-12 tracking-tight">
               Ready to shape<br />
               your child&apos;s <span className="text-[#FE9860]">bright</span><br />
               <span className="text-[#FE9860]">future?</span>
@@ -36,7 +36,7 @@ const AdmissionsSection = () => {
 
             {/* Timeline / Stats line */}
             <div className="w-full max-w-lg border-t border-white/20 pt-8 mb-12">
-              <div className="flex justify-between items-start text-center">
+              <div className="grid grid-cols-2 md:flex md:justify-between gap-y-8 gap-x-4 items-start text-center">
                 <div className="flex flex-col">
                   <span className="text-2xl md:text-3xl font-medium text-white mb-2">8+</span>
                   <span className="text-[10px] md:text-xs font-medium tracking-widest text-[#a8b2d1] uppercase">YEARS</span>

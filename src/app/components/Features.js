@@ -26,7 +26,7 @@ const Features = () => {
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
-            <h2 className="text-4xl font-extrabold text-[#0f1f42] md:text-5xl lg:text-6xl tracking-tight">
+            <h2 className="text-3xl font-extrabold text-[#0f1f42] md:text-5xl lg:text-6xl tracking-tight">
               Why Choose Us?
             </h2>
           </div>

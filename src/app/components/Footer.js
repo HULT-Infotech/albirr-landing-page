@@ -22,13 +22,13 @@ const Footer = () => {
         <div className="grid gap-16 lg:grid-cols-12 mb-20">
           
           {/* Logo & Brand Column */}
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-3 flex flex-col items-center lg:items-start text-center lg:text-left">
             <div className="mb-6">
               <Image 
                 src="/newlogo 1.png" 
                 alt="Albirr Logo" 
-                width={150} 
-                height={50} 
+                width={120} 
+                height={40} 
                 className="brightness-200 contrast-200"
               />
             </div>
@@ -38,8 +38,8 @@ const Footer = () => {
           </div>
 
           {/* Quick Links Column */}
-          <div className="lg:col-span-2">
-            <h4 className="text-lg font-bold mb-8 tracking-tight">Quick Links</h4>
+          <div className="lg:col-span-2 text-center lg:text-left">
+            <h4 className="text-lg font-bold mb-6 md:mb-8 tracking-tight text-white">Quick Links</h4>
             <ul className="space-y-4 text-gray-400 text-sm font-medium">
               <li><Link href="#" className="hover:text-white transition-colors">Home</Link></li>
               <li><Link href="#" className="hover:text-white transition-colors">About</Link></li>
@@ -52,8 +52,8 @@ const Footer = () => {
           </div>
 
           {/* Useful Links Column */}
-          <div className="lg:col-span-2">
-            <h4 className="text-lg font-bold mb-8 tracking-tight">Useful Links</h4>
+          <div className="lg:col-span-2 text-center lg:text-left">
+            <h4 className="text-lg font-bold mb-6 md:mb-8 tracking-tight text-white">Useful Links</h4>
             <ul className="space-y-4 text-gray-400 text-sm font-medium">
               <li><Link href="#" className="hover:text-white transition-colors">Curriculum</Link></li>
               <li><Link href="#" className="hover:text-white transition-colors">Academics</Link></li>
@@ -65,9 +65,9 @@ const Footer = () => {
           </div>
 
           {/* Get In Touch Column */}
-          <div className="lg:col-span-3">
-            <h4 className="text-lg font-bold mb-8 tracking-tight">Get In Touch</h4>
-            <ul className="space-y-5">
+          <div className="lg:col-span-3 text-center lg:text-left">
+            <h4 className="text-lg font-bold mb-6 md:mb-8 tracking-tight text-white">Get In Touch</h4>
+            <ul className="space-y-5 flex flex-col items-center lg:items-start">
               <li className="flex items-center gap-4 group">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/5 border border-white/10 text-white transition-colors group-hover:bg-[#36E1FF]/20">
                   <Phone className="h-4 w-4" />
@@ -92,9 +92,9 @@ const Footer = () => {
           </div>
 
           {/* Follow Us Column */}
-          <div className="lg:col-span-2">
-            <h4 className="text-lg font-bold mb-8 tracking-tight">Follow Us</h4>
-            <div className="flex gap-4">
+          <div className="lg:col-span-2 text-center lg:text-left flex flex-col items-center lg:items-start">
+            <h4 className="text-lg font-bold mb-6 md:mb-8 tracking-tight text-white">Follow Us</h4>
+            <div className="flex gap-4 justify-center lg:justify-start">
               <Link href="#" className="flex h-10 w-10 items-center justify-center rounded-full bg-white/5 border border-white/10 hover:bg-[#3b5998] transition-all">
                 <svg className="h-5 w-5 fill-white" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
               </Link>
@@ -114,8 +114,8 @@ const Footer = () => {
           <div className="absolute inset-0 flex items-center gap-12 flex-nowrap min-w-max animate-scroll">
             {[...Array(10)].map((_, i) => (
               <div key={i} className="flex items-center gap-4 shrink-0">
-                <Image src="/newlogo 1.png" alt="" width={40} height={40} className="grayscale brightness-200" />
-                <span className="text-2xl font-black whitespace-nowrap tracking-widest text-white">ALBIRR SCHOOLS</span>
+                <Image src="/newlogo 1.png" alt="" width={30} height={30} className="grayscale brightness-200" />
+                <span className="text-lg md:text-2xl font-black whitespace-nowrap tracking-widest text-white">ALBIRR SCHOOLS</span>
               </div>
             ))}
           </div>

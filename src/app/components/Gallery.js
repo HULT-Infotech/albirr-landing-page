@@ -16,18 +16,18 @@ const Gallery = () => {
       <div className="mx-auto max-w-7xl">
         
         {/* Main Glassmorphism Container */}
-        <div className="relative z-10 bg-white/5 backdrop-blur-2xl border border-white/10 rounded-[4rem] p-8 md:p-12 lg:p-16 shadow-[0_30px_100px_rgba(0,0,0,0.3)]">
+        <div className="relative z-10 bg-white/5 backdrop-blur-2xl border border-white/10 rounded-[2rem] md:rounded-[4rem] p-6 md:p-12 lg:p-16 shadow-[0_30px_100px_rgba(0,0,0,0.3)]">
           
           {/* Tab Header */}
-          <div className="flex justify-center mb-16">
-            <div className="inline-flex bg-[#1c243c]/80 backdrop-blur-md p-1.5 rounded-full border border-white/10 shadow-inner">
-              <button className="px-8 py-2.5 rounded-full bg-[#9C4A9C]/80 text-white font-bold text-sm tracking-wide shadow-lg transition-all">
+          <div className="flex justify-center mb-12 px-2">
+            <div className="inline-flex bg-[#1c243c]/80 backdrop-blur-md p-1.5 rounded-full border border-white/10 shadow-inner overflow-x-auto no-scrollbar max-w-full">
+              <button className="whitespace-nowrap px-4 md:px-8 py-2.5 rounded-full bg-[#9C4A9C]/80 text-white font-bold text-xs md:text-sm tracking-wide shadow-lg transition-all">
                 Gallery
               </button>
-              <button className="px-8 py-2.5 rounded-full text-white/70 font-bold text-sm tracking-wide hover:text-white transition-all">
+              <button className="whitespace-nowrap px-4 md:px-8 py-2.5 rounded-full text-white/70 font-bold text-xs md:text-sm tracking-wide hover:text-white transition-all">
                 News & Media
               </button>
-              <button className="px-8 py-2.5 rounded-full text-white/70 font-bold text-sm tracking-wide hover:text-white transition-all">
+              <button className="whitespace-nowrap px-4 md:px-8 py-2.5 rounded-full text-white/70 font-bold text-xs md:text-sm tracking-wide hover:text-white transition-all">
                 Downloads
               </button>
             </div>
@@ -38,7 +38,7 @@ const Gallery = () => {
             {images.map((img, idx) => (
               <div 
                 key={idx} 
-                className="relative aspect-[4/3] rounded-[2rem] overflow-hidden group shadow-xl transition-all hover:scale-[1.03] hover:shadow-2xl"
+                className="relative aspect-[4/3] rounded-[1.5rem] md:rounded-[2rem] overflow-hidden group shadow-xl transition-all hover:scale-[1.03] hover:shadow-2xl"
               >
                 <Image
                   src={img.src}
