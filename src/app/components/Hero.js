@@ -124,12 +124,13 @@ const Hero = () => {
           <div className="absolute top-0 left-8 right-8 h-px bg-gradient-to-r from-transparent via-[#36E1FF]/40 to-transparent" />
 
           {/* ── Two-column: text LEFT / image RIGHT ── */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2">
 
             {/* LEFT — Text block */}
-            <div className="flex-1 flex flex-col gap-3 min-w-0">
-              <h1 className="hero-text-animate text-[2rem] sm:text-[2.4rem] font-black leading-[1.15] tracking-tight text-white">
-                Shaping Future<br />
+            <div className="flex flex-col gap-4 min-w-0" style={{flex: '0 0 52%'}}>
+              <h1 className="hero-text-animate text-[2.5rem] sm:text-[3rem] font-black leading-[1.1] tracking-tight text-white">
+                Shaping<br />
+                Future<br />
                 Generations<br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#36E1FF] to-[#9C4A9C]">
                   with Faith &amp;
@@ -137,23 +138,21 @@ const Hero = () => {
                 Knowledge
               </h1>
 
-
-
-              <p className="hero-text-animate text-[13px] sm:text-base leading-relaxed text-white/75 max-w-[220px]">
+              <p className="hero-text-animate text-sm leading-relaxed text-white/70">
                 Delivering quality Islamic education through 350+ branches worldwide.
               </p>
 
-              {/* CTA Buttons — stacked on mobile card */}
-              <div className="hero-text-animate flex flex-col gap-2 pt-1">
+              {/* CTA Buttons */}
+              <div className="hero-text-animate flex flex-col gap-2.5">
                 <Link
                   href="#"
-                  className="inline-flex items-center justify-center rounded-xl bg-[#9C4A9C] px-5 py-3 text-sm sm:text-base font-bold text-white shadow-[0_8px_30px_rgba(156,74,156,0.35)] transition hover:brightness-125 active:scale-95"
+                  className="inline-flex items-center justify-center rounded-xl bg-[#9C4A9C] px-5 py-3.5 text-sm font-bold text-white shadow-[0_8px_30px_rgba(156,74,156,0.4)] transition hover:brightness-125 active:scale-95"
                 >
                   Join Us
                 </Link>
                 <Link
                   href="#"
-                  className="inline-flex items-center justify-center rounded-xl border border-white/35 bg-transparent px-5 py-3 text-sm sm:text-base font-bold text-white transition hover:border-white hover:bg-white/5 active:scale-95"
+                  className="inline-flex items-center justify-center rounded-xl border border-white/30 bg-transparent px-5 py-3.5 text-sm font-bold text-white transition hover:border-white hover:bg-white/5 active:scale-95"
                 >
                   Learn More
                 </Link>
@@ -161,12 +160,12 @@ const Hero = () => {
             </div>
 
             {/* RIGHT — Floating hero image (overflows card intentionally) */}
-            <div className="relative flex-shrink-0 w-[62%] sm:w-[58%] flex items-center justify-center -mr-6 sm:-mr-8">
+            <div className="relative flex-1 flex items-center justify-center -mr-14 sm:-mr-16">
               {/* Glow behind image */}
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <div className="w-52 h-52 rounded-full bg-[#9C4A9C]/25 blur-3xl" />
+                <div className="w-64 h-64 rounded-full bg-[#9C4A9C]/25 blur-3xl" />
               </div>
-              <div className="hero-image-float relative w-full aspect-square scale-110">
+              <div className="hero-image-float relative w-full aspect-square scale-[1.3]">
                 <Image
                   src="/first_image.png"
                   alt="Students learning with Al-Birr Schools"
