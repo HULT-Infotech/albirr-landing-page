@@ -10,12 +10,13 @@ const Navbar = () => {
       <div className="mx-auto flex max-w-7xl items-center justify-between">
         {/* Logo */}
         <Link href="#" className="flex-shrink-0">
-          <div className="relative h-[108px] w-[108px] rounded-lg overflow-hidden flex-shrink-0">
+          <div className="relative h-20 w-56 sm:h-24 sm:w-64 md:h-28 md:w-72 lg:h-32 lg:w-80 rounded-lg flex-shrink-0">
             <Image
               src="/newlogo 1.png"
               alt="AL-BIRR Schools Logo"
               fill
-              className="object-contain"
+              className="object-contain object-left"
+              priority
             />
           </div>
         </Link>

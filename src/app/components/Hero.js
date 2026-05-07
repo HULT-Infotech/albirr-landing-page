@@ -30,18 +30,19 @@ const Hero = () => {
       <div className="relative z-[100] mx-auto max-w-7xl flex items-center justify-between pt-4 pb-6 md:pt-4 md:pb-8 lg:pt-6 lg:pb-10">
         {/* Logo */}
         <Link href="#" className="flex-shrink-0 relative z-[101]">
-          <div className="relative h-16 w-36 md:h-20 md:w-48 lg:h-24 lg:w-56 xl:h-32 xl:w-80 rounded-lg overflow-hidden flex-shrink-0">
+          <div className="relative h-20 w-56 sm:h-24 sm:w-64 md:h-28 md:w-72 lg:h-32 lg:w-80 rounded-lg flex-shrink-0">
             <Image
               src="/newlogo 1.png"
               alt="AL-BIRR Schools Logo"
               fill
-              className="object-contain"
+              className="object-contain object-left"
+              priority
             />
           </div>
         </Link>
 
         {/* Desktop Menu Items */}
-        <div className="hidden lg:flex items-center gap-4 xl:gap-8">
+        <div className="hidden xl:flex items-center gap-4 xl:gap-8">
           <Link href="#" className="text-sm font-medium text-white/85 hover:text-white transition">Home</Link>
           <Link href="#" className="text-sm font-medium text-white/85 hover:text-white transition">About</Link>
           <Link href="#" className="text-sm font-medium text-white/85 hover:text-white transition">Academics</Link>
@@ -50,7 +51,7 @@ const Hero = () => {
         </div>
 
         {/* Desktop Right CTA */}
-        <div className="hidden lg:flex items-center gap-4 xl:gap-6">
+        <div className="hidden xl:flex items-center gap-4 xl:gap-6">
           <Link href="#" className="text-sm font-medium text-white/85 hover:text-white transition">
             Contact
           </Link>
@@ -65,7 +66,7 @@ const Hero = () => {
 
         {/* Mobile Menu Toggle */}
         <button 
-          className="relative z-[101] flex lg:hidden h-10 w-10 items-center justify-center rounded-lg bg-white/10 text-white backdrop-blur-md"
+          className="relative z-[101] flex xl:hidden h-10 w-10 items-center justify-center rounded-lg bg-white/10 text-white backdrop-blur-md"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -74,7 +75,7 @@ const Hero = () => {
 
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
-        <div className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#0f1f42]/95 backdrop-blur-xl lg:hidden animate-in fade-in duration-300">
+        <div className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#0f1f42]/95 backdrop-blur-xl xl:hidden animate-in fade-in duration-300">
           <div className="flex flex-col items-center gap-8 text-center px-6 w-full max-w-sm">
             <Link href="#" onClick={() => setIsMenuOpen(false)} className="text-2xl font-bold text-white hover:text-[#36E1FF] transition">Home</Link>
             <Link href="#" onClick={() => setIsMenuOpen(false)} className="text-2xl font-bold text-white hover:text-[#36E1FF] transition">About</Link>
@@ -97,9 +98,9 @@ const Hero = () => {
 
       {/* Hero Content - Pulled tightly upwards towards navbar */}
       <div className="relative z-10 mx-auto max-w-7xl mt-8 md:-mt-8 lg:-mt-20">
-        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-          <div className="flex flex-col justify-center space-y-8 text-center lg:text-left">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[54px] font-black leading-[1.15] tracking-tight text-white max-w-[850px] mx-auto lg:mx-0">
+        <div className="grid gap-8 lg:gap-12 lg:grid-cols-12 lg:items-center">
+          <div className="lg:col-span-7 xl:col-span-6 flex flex-col justify-center space-y-8 text-center lg:text-left z-20">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[42px] xl:text-[54px] font-black leading-[1.15] tracking-tight text-white max-w-[850px] mx-auto lg:mx-0">
               Shaping Future <br className="hidden sm:block" />
               Generations with Faith <br className="hidden sm:block" />
               and Knowledge
@@ -124,8 +125,8 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="relative flex items-center justify-center lg:justify-end overflow-visible mt-8 lg:mt-0 px-4 md:px-0">
-            <div className="relative w-full aspect-square max-w-[500px] md:max-w-[800px] lg:-ml-24 lg:scale-125 transform transition-transform">
+          <div className="relative lg:col-span-5 xl:col-span-6 flex items-center justify-center lg:justify-end overflow-visible mt-8 lg:mt-0 px-4 md:px-0 z-10">
+            <div className="relative w-full aspect-square max-w-[500px] md:max-w-[800px] lg:scale-110 lg:translate-x-2 xl:translate-x-0 xl:-ml-24 xl:scale-125 transform transition-transform">
               <Image
                 src="/first_image.png"
                 alt="Students learning with Al-Birr Schools"
