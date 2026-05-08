@@ -42,7 +42,7 @@ const Features = () => {
         <div
           ref={headerRef}
           data-reveal="fade-up"
-          className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6"
+          className="flex flex-col md:flex-row md:items-baseline justify-between mb-2 md:mb-20 gap-4 text-center md:text-left items-center md:items-baseline"
         >
           <div>
             <h2 className="text-3xl font-extrabold text-[#0f1f42] md:text-5xl lg:text-6xl tracking-tight">

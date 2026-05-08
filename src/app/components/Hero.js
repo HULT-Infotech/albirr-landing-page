@@ -1,12 +1,25 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowUpRight, Menu, X } from 'lucide-react';
 
 const Hero = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+      document.body.style.paddingRight = "15px";
+    } else {
+      document.body.style.overflow = "auto";
+      document.body.style.paddingRight = "0px";
+    }
 
+    return () => {
+      document.body.style.overflow = "auto";
+      document.body.style.paddingRight = "0px";
+    };
+  }, [isMenuOpen]);
   return (
     <section className="relative overflow-hidden px-4 md:px-12 pt-0 pb-16 md:pb-24 lg:pb-32">
       {/* Background Shape Image */}
@@ -85,27 +98,37 @@ const Hero = () => {
       </div>
 
       {/* Mobile Menu Overlay */}
-      {isMenuOpen && (
-        <div className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#0f1f42]/95 backdrop-blur-xl lg:hidden animate-in fade-in duration-300">
-          <div className="flex flex-col items-center gap-8 text-center px-6 w-full max-w-sm">
-            <Link href="#" onClick={() => setIsMenuOpen(false)} className="text-2xl font-bold text-white hover:text-[#36E1FF] transition">Home</Link>
-            <Link href="#" onClick={() => setIsMenuOpen(false)} className="text-2xl font-bold text-white hover:text-[#36E1FF] transition">About</Link>
-            <Link href="#" onClick={() => setIsMenuOpen(false)} className="text-2xl font-bold text-white hover:text-[#36E1FF] transition">Academics</Link>
-            <Link href="#" onClick={() => setIsMenuOpen(false)} className="text-2xl font-bold text-white hover:text-[#36E1FF] transition">Administration</Link>
-            <Link href="#" onClick={() => setIsMenuOpen(false)} className="text-2xl font-bold text-white hover:text-[#36E1FF] transition">Media</Link>
-            <div className="h-px w-24 bg-white/20 my-4" />
-            <Link href="#" onClick={() => setIsMenuOpen(false)} className="text-xl font-medium text-white/80 hover:text-white transition">Contact</Link>
-            <Link
-              href="#"
-              onClick={() => setIsMenuOpen(false)}
-              className="w-full flex items-center justify-center gap-2 rounded-xl bg-[#9C4A9C] px-8 py-4 text-lg font-bold text-white shadow-xl transition-all active:scale-95"
-            >
-              Student Portal
-              <ArrowUpRight className="h-5 w-5" />
-            </Link>
-          </div>
+      <div
+        className={`fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#0f1f42]/95 backdrop-blur-xl lg:hidden transition-all duration-400 ease-in-out ${isMenuOpen
+          ? "opacity-100 visible"
+          : "opacity-0 invisible"
+          }`}
+      >
+        <button
+          className="absolute top-6 right-6 z-[101] flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 text-white backdrop-blur-md transition-all duration-200 hover:bg-white/20 active:scale-95"
+          onClick={() => setIsMenuOpen(false)}
+          aria-label="Close menu"
+        >
+          <X className="h-5 w-5" />
+        </button>
+        <div className="flex flex-col items-center gap-8 text-center px-6 w-full max-w-sm">
+          <Link href="#" onClick={() => setIsMenuOpen(false)} className="text-2xl font-bold text-white hover:text-[#36E1FF] transition">Home</Link>
+          <Link href="#" onClick={() => setIsMenuOpen(false)} className="text-2xl font-bold text-white hover:text-[#36E1FF] transition">About</Link>
+          <Link href="#" onClick={() => setIsMenuOpen(false)} className="text-2xl font-bold text-white hover:text-[#36E1FF] transition">Academics</Link>
+          <Link href="#" onClick={() => setIsMenuOpen(false)} className="text-2xl font-bold text-white hover:text-[#36E1FF] transition">Administration</Link>
+          <Link href="#" onClick={() => setIsMenuOpen(false)} className="text-2xl font-bold text-white hover:text-[#36E1FF] transition">Media</Link>
+          <div className="h-px w-24 bg-white/20 my-4" />
+          <Link href="#" onClick={() => setIsMenuOpen(false)} className="text-xl font-medium text-white/80 hover:text-white transition">Contact</Link>
+          <Link
+            href="#"
+            onClick={() => setIsMenuOpen(false)}
+            className="w-full flex items-center justify-center gap-2 rounded-xl bg-[#9C4A9C] px-8 py-4 text-lg font-bold text-white shadow-xl transition-all active:scale-95"
+          >
+            Student Portal
+            <ArrowUpRight className="h-5 w-5" />
+          </Link>
         </div>
-      )}
+      </div>
 
       {/* ─────────────────────────────────────────────────────────────
           MOBILE HERO — Rounded-corner card, side-by-side layout

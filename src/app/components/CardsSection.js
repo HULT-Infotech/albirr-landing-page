@@ -15,7 +15,7 @@ const CardsSection = () => {
         <div
           ref={headerRef}
           data-reveal="fade-up"
-          className="flex flex-col md:flex-row md:items-baseline justify-between mb-16 md:mb-20 gap-4 text-center md:text-left items-center md:items-baseline"
+          className="flex flex-col md:flex-row md:items-baseline justify-between mb-5 md:mb-20 gap-4 text-center md:text-left items-center md:items-baseline"
         >
           <h2 className="text-3xl md:text-5xl font-extrabold text-[#0f1f42] tracking-tight">
             Our Facilities
@@ -26,7 +26,7 @@ const CardsSection = () => {
         </div>
 
         {/* Cards Grid */}
-        <div className="grid gap-6 md:gap-8 md:grid-cols-3 max-w-6xl mx-auto">
+        <div className="grid gap-6 md:gap-8 md:grid-cols-3 max-w-8xl mx-auto">
           
           {/* Card 1 */}
           <div
