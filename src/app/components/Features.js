@@ -1,8 +1,8 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 
 const FeatureCard = ({ id, alt }) => (
-  <div className="relative group transition-all duration-500 hover:scale-105">
+  <div className="relative">
     <Image
       src={`/row${id}.png`}
       alt={alt}
@@ -18,7 +18,7 @@ const Features = () => {
     { id: 1, alt: "Child Friendly Schooling" },
     { id: 2, alt: "Nurturing Environment" },
     { id: 3, alt: "IT Enabled Learning" },
-    { id: 4, alt: "Activity Based Learning" }
+    { id: 4, alt: "Activity Based Learning" },
   ];
 
   return (
@@ -26,16 +26,16 @@ const Features = () => {
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
-            <h2 className="text-3xl font-extrabold text-[#0f1f42] md:text-5xl lg:text-6xl tracking-tight">
+            <h2 className="text-3xl font-bold text-[#26335D] md:text-4xl lg:text-4xl tracking-tight">
               Why Choose Us?
             </h2>
           </div>
-          <div className="text-gray-400 font-medium tracking-wider text-sm md:text-base uppercase flex items-center gap-2 pb-2">
+          <div className="text-[#A0A4AB] font-medium text-xs md:text-sm tracking-wide italic">
             / Our Features
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {features.map((feature) => (
             <FeatureCard key={feature.id} {...feature} />
           ))}
