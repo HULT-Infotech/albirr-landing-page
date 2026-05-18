@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight, Menu, X } from "lucide-react";
+import HeroNavbar from "./HeroNavbar";
 
 const Hero = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,7 +16,7 @@ const Hero = () => {
           src="/hero shape 5.png"
           alt="Hero background shape"
           fill
-          className="object-cover object-left-top"
+          className="object-cover object-top-left"
           priority
         />
       </div>
@@ -27,95 +28,43 @@ const Hero = () => {
       </div>
 
       {/* Navbar - Pulled tightly to top */}
-      <div className="relative z-[100] mx-auto flex items-center justify-between pb-6 md:pt-0 md:pb-8 lg:pt-0 lg:pb-10">
-        {/* Logo */}
-        <Link href="/" className="flex-shrink-0 relative z-[101]">
-          <div className="relative h-20 w-56 sm:h-24 sm:w-64 md:h-28 md:w-72 lg:h-32 lg:w-80 rounded-lg flex-shrink-0">
-            <Image
-              src="/newlogo 1.png"
-              alt="AL-BIRR Schools Logo"
-              fill
-              className="object-contain object-left"
-              priority
-            />
-          </div>
-        </Link>
-
-        {/* Desktop Menu Items */}
-        <div className="hidden xl:flex items-center gap-4 xl:gap-8">
-          <Link
-            href="/"
-            className="text-sm font-medium text-white/85 hover:text-white transition"
-          >
-            Home
-          </Link>
-          <Link
-            href="/pages/about"
-            className="text-sm font-medium text-white/85 hover:text-white transition"
-          >
-            About
-          </Link>
-          <Link
-            href="#"
-            className="text-sm font-medium text-white/85 hover:text-white transition"
-          >
-            Academics
-          </Link>
-          <Link
-            href="#"
-            className="text-sm font-medium text-white/85 hover:text-white transition"
-          >
-            Administration
-          </Link>
-          <Link
-            href="#"
-            className="text-sm font-medium text-white/85 hover:text-white transition"
-          >
-            Media
-          </Link>
-        </div>
-
-        {/* Desktop Right CTA */}
-        <div className="hidden xl:flex items-center gap-4 xl:gap-6">
-          <Link
-            href="/#contact"
-            className="text-sm font-medium text-white/85 hover:text-white transition"
-          >
-            Contact
-          </Link>
-          <Link
-            href="#"
-            className="group flex items-center gap-2 rounded-lg bg-[#9C4A9C] px-4 md:px-5 py-2 md:py-2.5 text-sm font-semibold text-white transition-all hover:brightness-110 active:scale-95"
-          >
-            Student Portal
-            <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </Link>
-        </div>
-
-        {/* Mobile Menu Toggle */}
-        <button
-          className="relative z-[101] flex xl:hidden p-2 items-center justify-center text-white"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          {isMenuOpen ? (
-            <X className="h-8 w-8" />
-          ) : (
-            <Menu className="h-8 w-8" />
-          )}
-        </button>
-      </div>
+      <HeroNavbar
+        onMobileMenuToggle={() => setIsMenuOpen(!isMenuOpen)}
+        isMenuOpen={isMenuOpen}
+      />
 
       {/* Mobile Menu Overlay */}
-      {isMenuOpen && (
-        <div className="fixed inset-0 z-110 flex flex-col items-center justify-center bg-[#0f1f42] xl:hidden animate-in fade-in duration-300">
+      <div
+        className={`fixed inset-0 z-110 xl:hidden transition-opacity duration-300 ${
+          isMenuOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
+        }`}
+        aria-hidden={!isMenuOpen}
+      >
+        {/* Backdrop */}
+        <div
+          className="absolute inset-0 bg-[#0f1f42]/70"
+          onClick={() => setIsMenuOpen(false)}
+        />
+
+        {/* Drawer */}
+        <div
+          className={`absolute right-0 top-0 h-full w-[85%] max-w-sm bg-[#0f1f42] shadow-2xl transition-transform duration-300 ease-out ${
+            isMenuOpen ? "translate-x-0" : "translate-x-full"
+          }`}
+        >
+          {/* Close button (same top-right position as hamburger) */}
           <button
             className="absolute top-6 right-6 p-2 text-white/80 hover:text-white"
             onClick={() => setIsMenuOpen(false)}
+            type="button"
+            aria-label="Close menu"
           >
             <X className="h-8 w-8" />
           </button>
 
-          <div className="flex flex-col items-center gap-8 text-center px-6 w-full max-w-sm">
+          <div className="flex h-full flex-col items-start justify-center gap-8 px-8">
             <Link
               href="/"
               onClick={() => setIsMenuOpen(false)}
@@ -151,7 +100,9 @@ const Hero = () => {
             >
               Media
             </Link>
-            <div className="h-px w-24 bg-white/20 my-4" />
+
+            <div className="h-px w-24 bg-white/20" />
+
             <Link
               href="/#contact"
               onClick={() => setIsMenuOpen(false)}
@@ -162,14 +113,14 @@ const Hero = () => {
             <Link
               href="#"
               onClick={() => setIsMenuOpen(false)}
-              className="w-full flex items-center justify-center gap-2 rounded-xl bg-[#9C4A9C] px-8 py-4 text-lg font-normal text-white shadow-xl transition-all active:scale-95"
+              className="mt-2 inline-flex items-center justify-center gap-2 rounded-xl bg-[#9C4A9C] px-8 py-4 text-lg font-semibold text-white shadow-xl shadow-[#9C4A9C]/30 ring-1 ring-white/10 transition-all hover:brightness-110 active:scale-95"
             >
               Student Portal
               <ArrowUpRight className="h-5 w-5" />
             </Link>
           </div>
         </div>
-      )}
+      </div>
 
       {/* Hero Content */}
       <div className="relative z-10 mx-auto max-w-7xl flex flex-col gap-10">
@@ -188,14 +139,14 @@ const Hero = () => {
             <div className="flex flex-row items-center justify-start gap-3 sm:gap-4 pt-2 sm:pt-4">
               <Link
                 href="#"
-                className="w-auto sm:w-auto relative inline-flex items-center justify-center rounded-xl bg-[#9C4A9C] box-border px-4 sm:px-5 py-2.5 sm:py-4 text-xs sm:text-base font-bold text-white shadow-[0_10px_40px_rgba(156,74,156,0.3)] transition hover:brightness-125 active:scale-95 min-w-28 sm:min-w-28 border-2 border-transparent h-[44px] sm:h-[56px]"
+                className="w-auto sm:w-auto relative inline-flex items-center justify-center rounded-xl bg-[#9C4A9C] box-border px-4 sm:px-5 py-2.5 sm:py-4 text-xs sm:text-base font-bold text-white shadow-[0_10px_40px_rgba(156,74,156,0.3)] transition hover:brightness-125 active:scale-95 min-w-28 sm:min-w-28 border-2 border-transparent h-11 sm:h-14"
               >
                 Join Us
               </Link>
 
               <Link
                 href="#"
-                className="w-auto sm:w-auto inline-flex items-center justify-center rounded-xl border-2 border-white/40 bg-transparent box-border px-5 py-2.5 sm:px-8 sm:py-4 text-xs sm:text-base font-bold text-white transition hover:border-white hover:bg-white/5 active:scale-95 min-w-32 sm:min-w-44 h-[44px] sm:h-[56px]"
+                className="w-auto sm:w-auto inline-flex items-center justify-center rounded-xl border-2 border-white/40 bg-transparent box-border px-5 py-2.5 sm:px-8 sm:py-4 text-xs sm:text-base font-bold text-white transition hover:border-white hover:bg-white/5 active:scale-95 min-w-32 sm:min-w-44 h-11 sm:h-14"
               >
                 Learn More
               </Link>
